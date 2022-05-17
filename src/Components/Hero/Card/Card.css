@@ -1,0 +1,114 @@
+:root {
+    --radius: 5px;
+}
+
+.box-container{
+    transition-duration: 0.3s;
+    display: flex;
+    flex: auto;
+    max-width: 25%;
+    min-width: 25em;
+    height: 28em;
+    align-items: stretch;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 5px solid transparent;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;}
+
+.box-container:hover{
+    border: 5px solid #ff1493;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.image{ 
+    width: 100%;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: var(--radius);
+}
+
+.name p{
+    height: 5px;
+}
+
+.properties{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.property-details p{
+    height: 5px;
+}
+
+.info{
+    width: 100%;
+    justify-content: space-between;
+    height: auto;
+}
+
+.description{
+    width: auto;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.btn-delete{  
+    border: solid 3px white;    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.btn-delete:hover{
+    background-color: red;
+    border: solid 3px red;
+    transition-duration: 0.5s;
+}
+
+.btn-edit{
+    border: solid 2px white;
+    margin-top: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.btn-edit:hover{
+    color: black;
+    font-weight: 700;
+    background-color: yellow;
+    border: solid 3px yellow;
+    transition-duration: 0.5s;
+}
+
+.pink-style{
+    color: hotpink;
+}
+
+@media only screen and (max-width: 1550px) {
+    .box-container {
+        transition-duration: 0.3s;
+        flex-direction: column;
+        max-width: 43%;
+        min-width: 10em;
+        height: 28em;
+    }
+
+    .image {
+        height: 10em;
+        width: auto;
+    }
+}
+
+@media only screen and (min-width: 1550px) {
+    .info {
+        transition-duration: 0.3s;
+        margin-left: 1em;
+    }
+}

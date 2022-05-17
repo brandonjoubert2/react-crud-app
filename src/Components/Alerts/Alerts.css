@@ -1,0 +1,120 @@
+.alertbar-centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-in-out;
+}
+
+.alertbar-container {
+    width: 700px;
+    box-shadow: 0 2px 8px 0 #1a273d40;
+    border: solid 1px #e0e7ff;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    margin: 0 0.5rem;
+    transition: all 1s ease-in-out;
+}
+
+.error-container {
+    border-left: 4px solid red;
+}
+
+.info-container {
+    transition: all 1s ease-in-out;
+    border-left: 4px solid #2b89e9;
+}
+
+.success-container {
+    border-left: 4px solid #4cd16d;
+}
+
+.warning-container {
+    border-left: 4px solid #ffbc22;
+}
+
+.alertbar-container > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease-in-out;
+}
+
+.alertbar-info-container {
+    display: flex;
+    align-items: center;
+}
+
+.alertbar-info-container > div > h5:nth-child(2) {
+    margin-bottom: 0;
+}
+
+.alertbar-container > div > div:nth-child(1) {
+    margin-right: 1rem;
+}
+
+.alertbar-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    /*background-image: url(/static/media/alertCircle.3856fc8a.svg);*/
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 1rem;
+}
+
+.error-alertbar-icon {
+    background-color: red;
+}
+
+.info-alertbar-icon {
+    background-color: #2b89e9;
+}
+
+.success-alertbar-icon {
+    background-color: #4cd16d;
+}
+
+.warning-alertbar-icon {
+    background-color: #ffbc22;
+}
+
+#close-alertbar-icon {
+    display: flex;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 5px;
+    padding: 5px;
+    justify-content: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#close-alertbar-icon:hover {
+    color: white;
+    background: red;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#alertbar-fixed-container {
+    position: fixed;
+    top: 1rem;
+}
+
+.rubik-text {
+    font-size: 15px;
+    font-weight: 500;
+    color: #2e384d;
+}
+
+.muted-rubik-text {
+    font-size: 15px;
+    color: #2e384dce;
+}
+
+@media (max-width: 728px) {
+    .alertbar-container {
+        width: auto;
+    }
+}

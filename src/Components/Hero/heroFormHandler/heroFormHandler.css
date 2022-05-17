@@ -1,0 +1,112 @@
+:root {
+    --font: "Agency FB";
+    --box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+}
+
+.outer-container {
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: hidden;
+    margin: -10px;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.outer-container.show{
+    opacity: 1;
+    pointer-events: visible;
+}
+
+.container {
+    display: flex;
+    background: url("https://wallpapercave.com/wp/wp6751611.jpg");
+    background-size: cover;
+    flex: auto;
+    flex-direction: column;
+    max-height: 35em;
+    max-width: 50em;
+    margin-left: 3em;
+    margin-right: 3em;
+    align-items: stretch;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    transform: translateY(-200px);
+    transition: all 0.3s ease-in-out;
+}
+
+.outer-container.show .container {
+    transform: translateY(0);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-container>h2 {
+    margin-top: 0;
+    font-family: var(--font);
+    font-size: 2.5rem;
+}
+
+.close-btn {
+    max-width: 3em;
+    height: 3em;
+    border: 1px solid rgba(128, 128, 128, 0.24);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+.close-btn:hover {
+    background: red;
+    color: white;
+}
+
+.form-input {
+    margin-bottom: 1.5em;
+    border-radius: 5px;
+    width: auto;
+    height: 4em;
+    padding-left: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.24);
+    box-shadow: var(--box-shadow);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.form-input:focus {
+    border: 1px solid hotpink;
+    outline: none;
+}
+
+.button-container {
+    display: flex;
+}
+
+.form-button {
+    width: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.24);
+    box-shadow: var(--box-shadow);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.form-button:hover {
+    color: white;
+    background: deeppink;
+}
+
+.hide-element {
+    display: none;
+}
